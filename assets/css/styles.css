@@ -428,32 +428,39 @@ section {
   gap: 20px;
 }
 
-/* ---------- photo card (hometown / trek shots) ---------- */
+/* ---------- photo card (trek shots) ---------- */
+/* Matches the hero's .blob-frame treatment: gradient-padded border,
+   morphing blob radius, and a safely-centered sticker that won't get
+   clipped by the organic shape. */
 
 .photo-card {
   position: relative;
   margin: 0;
-  border-radius: var(--radius-lg);
+  border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
   overflow: hidden;
-  background: var(--bg-elev);
-  border: 1px solid var(--border);
-  box-shadow: 0 20px 40px -20px rgba(0,0,0,0.35);
-  transition: transform 0.25s var(--ease), box-shadow 0.25s;
+  background: linear-gradient(135deg, var(--accent-4), var(--accent-1));
+  padding: 6px;
+  box-shadow: 0 30px 80px -30px color-mix(in oklab, var(--accent-4) 60%, transparent);
+  animation: morph 12s ease-in-out infinite;
+  animation-delay: -4s;
+  transition: transform 0.25s var(--ease);
 }
-.photo-card:hover { transform: translateY(-4px); box-shadow: 0 28px 50px -24px rgba(0,0,0,0.45); }
+.photo-card:hover { transform: translateY(-4px); }
 .photo-card img {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  border-radius: inherit;
 }
 .photo-sticker {
   position: absolute;
-  bottom: 14px;
-  left: 14px;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 8px 14px;
   border-radius: 999px;
-  background: color-mix(in oklab, var(--bg-elev) 85%, transparent);
+  background: color-mix(in oklab, var(--bg-elev) 90%, transparent);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--border);
@@ -461,13 +468,11 @@ section {
   font-size: 0.8rem;
   color: var(--fg);
   text-decoration: none;
+  white-space: nowrap;
   box-shadow: 0 10px 30px -12px rgba(0,0,0,0.4);
-  transition: transform 0.2s var(--ease), color 0.2s, background 0.2s;
+  transition: color 0.2s, background 0.2s;
 }
-.photo-sticker:hover {
-  transform: translateY(-2px);
-  color: var(--accent-3);
-}
+.photo-sticker:hover { color: var(--accent-3); }
 
 /* ---------- interests grid (chips + trek photo side by side) ---------- */
 
@@ -479,23 +484,32 @@ section {
 }
 .interests-grid .chips { gap: 12px; }
 .interests-grid .chip { padding: 12px 20px; font-size: 1rem; }
+.interests-grid .photo-card { max-width: 420px; justify-self: center; }
 @media (max-width: 820px) {
-  .interests-grid { grid-template-columns: 1fr; gap: 28px; }
+  .interests-grid { grid-template-columns: 1fr; gap: 36px; }
+  .interests-grid .photo-card { max-width: 320px; }
+  .photo-sticker { font-size: 0.72rem; padding: 7px 12px; }
 }
 .fact {
-  display: flex;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 16px;
   align-items: baseline;
-  gap: 14px;
 }
 .fact .num {
   font-family: var(--font-mono);
   font-size: 2.2rem;
   font-weight: 700;
+  line-height: 1;
   background: linear-gradient(120deg, var(--accent-1), var(--accent-4));
   -webkit-background-clip: text; background-clip: text;
   color: transparent;
 }
-.fact .label { color: var(--fg-dim); font-size: 0.95rem; }
+.fact .label { color: var(--fg-dim); font-size: 0.95rem; line-height: 1.4; }
+@media (max-width: 420px) {
+  .fact { grid-template-columns: 90px 1fr; gap: 12px; }
+  .fact .num { font-size: 1.9rem; }
+}
 
 /* ---------- skills ---------- */
 
