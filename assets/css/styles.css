@@ -170,13 +170,17 @@ code, pre, kbd {
 .hero-blob::after {
   content: "";
   position: absolute;
-  width: 520px;
-  height: 520px;
+  width: 420px;
+  height: 420px;
   border-radius: 50%;
-  filter: blur(90px);
+  filter: blur(60px);
   opacity: 0.55;
   animation: drift 18s ease-in-out infinite;
+  will-change: transform;
+  animation-play-state: paused;
 }
+.hero-in .hero-blob::before,
+.hero-in .hero-blob::after { animation-play-state: running; }
 .hero-blob::before {
   background: radial-gradient(circle, var(--accent-1), transparent 60%);
   top: -120px; left: -120px;
@@ -326,8 +330,10 @@ code, pre, kbd {
   background: linear-gradient(135deg, var(--accent-4), var(--accent-1));
   padding: 6px;
   animation: morph 12s ease-in-out infinite;
+  animation-play-state: paused;
   box-shadow: 0 30px 80px -30px color-mix(in oklab, var(--accent-4) 60%, transparent);
 }
+.hero-in .hero-portrait .blob-frame { animation-play-state: running; }
 .hero-portrait .blob-frame img {
   width: 100%; height: 100%;
   object-fit: cover;
@@ -350,7 +356,10 @@ code, pre, kbd {
   color: var(--fg);
   box-shadow: 0 10px 30px -12px rgba(0,0,0,0.4);
   animation: float 6s ease-in-out infinite;
+  animation-play-state: paused;
+  will-change: transform;
 }
+.hero-in .hero-portrait .sticker { animation-play-state: running; }
 .hero-portrait .sticker.s1 { top: 10%;  left: -20px;   color: var(--accent-3); }
 .hero-portrait .sticker.s2 { bottom: 18%; right: -24px; color: var(--accent-2); animation-delay: -3s; }
 .hero-portrait .sticker.s3 { bottom: -10px; left: 20%;  color: var(--accent-5); animation-delay: -1.5s; }
@@ -748,11 +757,14 @@ section {
   background: conic-gradient(from 90deg, var(--accent-1), var(--accent-2), var(--accent-3), var(--accent-4), var(--accent-5), var(--accent-1));
   border-radius: var(--radius-lg);
   z-index: -1;
-  filter: blur(50px);
+  filter: blur(40px);
   opacity: 0.55;
   animation: spin 20s linear infinite;
+  animation-play-state: paused;
   pointer-events: none;
+  will-change: transform;
 }
+.contact-in .contact-card::before { animation-play-state: running; }
 [data-theme="light"] .contact-card::before { opacity: 0.4; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .contact-card h2 {
@@ -994,6 +1006,14 @@ footer .heart { color: var(--accent-1); }
   }
   .nav-links.open { display: flex; }
   .nav-burger { display: inline-flex; align-items: center; justify-content: center; }
+
+  /* backdrop-filter recalculates every scroll frame — expensive on mobile GPUs.
+     Swap for a nearly-opaque background that reads similarly but costs nothing. */
+  .nav {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: color-mix(in oklab, var(--bg) 94%, transparent);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

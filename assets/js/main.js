@@ -52,8 +52,22 @@
       });
     }, { threshold: 0.1, rootMargin: "0px 0px -60px 0px" });
     document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    // pause heavy animations (blurred blobs, morphing frames, spinning glow)
+    // whenever their section is scrolled offscreen — big GPU/battery win
+    const togglePresence = (selector, className) => {
+      const el = document.querySelector(selector);
+      if (!el) return;
+      const obs = new IntersectionObserver(([entry]) => {
+        root.classList.toggle(className, entry.isIntersecting);
+      }, { rootMargin: "100px" });
+      obs.observe(el);
+    };
+    togglePresence(".hero", "hero-in");
+    togglePresence("#contact", "contact-in");
   } else {
     document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in"));
+    root.classList.add("hero-in", "contact-in");  // no IO support — leave animations running
   }
 
   // footer year
