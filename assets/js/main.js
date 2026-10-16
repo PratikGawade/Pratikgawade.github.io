@@ -3,11 +3,9 @@
 (() => {
   const root = document.documentElement;
 
-  // theme: localStorage > system preference > dark default
+  // theme: dark by default; respect user's toggle (persisted in localStorage)
   const stored = localStorage.getItem("theme");
-  const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-  const initial = stored || (prefersLight ? "light" : "dark");
-  root.setAttribute("data-theme", initial);
+  root.setAttribute("data-theme", stored || "dark");
 
   const toggle = document.querySelector(".theme-toggle");
   if (toggle) {
