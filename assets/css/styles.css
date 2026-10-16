@@ -394,6 +394,15 @@ section {
 }
 .about-grid p { color: var(--fg-dim); font-size: 1.08rem; }
 .about-grid p strong { color: var(--fg); }
+.about-grid p a {
+  color: var(--accent-3);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in oklab, var(--accent-3) 40%, transparent);
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+.about-grid p a:hover { color: var(--accent-1); text-decoration-color: var(--accent-1); }
+.about-grid p a strong { color: inherit; }
 
 .fact-card {
   background: var(--bg-elev);
