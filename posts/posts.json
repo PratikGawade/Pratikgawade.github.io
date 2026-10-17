@@ -1,5 +1,12 @@
 [
   {
+    "slug": "vpc-igw-subnets-route-tables",
+    "title": "VPC internet gateways, subnets and route tables",
+    "date": "2026-10-17",
+    "excerpt": "The three pieces most VPC questions actually hinge on — IGW, subnets, route tables. What they do, how they fit together, the exam gotchas, and the interview questions interviewers lean on.",
+    "tags": ["AWS", "VPC", "Networking", "DevOps"]
+  },
+  {
     "slug": "aws-vpc-overview",
     "title": "AWS VPC overview — exam & interview notes",
     "date": "2026-10-17",
