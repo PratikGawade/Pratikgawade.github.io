@@ -413,15 +413,25 @@ section {
 }
 .about-grid p { color: var(--fg-dim); font-size: 1.08rem; }
 .about-grid p strong { color: var(--fg); }
-.about-grid p a {
+.about-grid p a,
+.about-prose p a {
   color: var(--accent-3);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: color-mix(in oklab, var(--accent-3) 40%, transparent);
   transition: color 0.2s, text-decoration-color 0.2s;
 }
-.about-grid p a:hover { color: var(--accent-1); text-decoration-color: var(--accent-1); }
-.about-grid p a strong { color: inherit; }
+.about-grid p a:hover,
+.about-prose p a:hover { color: var(--accent-1); text-decoration-color: var(--accent-1); }
+.about-grid p a strong,
+.about-prose p a strong { color: inherit; }
+
+/* Single-column prose variant (fact-card removed) */
+.about-prose {
+  max-width: 760px;
+}
+.about-prose p { color: var(--fg-dim); font-size: 1.08rem; }
+.about-prose p strong { color: var(--fg); }
 
 .about-side {
   display: flex;

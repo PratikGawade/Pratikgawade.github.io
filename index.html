@@ -89,35 +89,26 @@
       <p>Software developer, mountain seeker, art enthusiast, forever curious.</p>
     </div>
 
-    <div class="about-grid">
-      <div class="reveal">
-        <p>
-          The day-job is at <strong><a href="https://nepa.com/" target="_blank" rel="noopener">Nepa</a></strong>
-          — a consumer-insights company that helps brands actually understand their customers. For 4+ years
-          I've been the person building the things that keep our products humming: containerised microservices
-          on Kubernetes, CI/CD pipelines in TeamCity, Vue + .NET Core dashboards for teams like
-          <em>CX Brand Tracker</em> and <em>Virgin Voyages</em>, and the Prometheus / Grafana / ELK plumbing
-          that keeps everything honest. The best days are the <em>"oh, that's 90% faster now"</em> ones.
-        </p>
-        <p>
-          The parts I most enjoy — <strong>automation, CI/CD and cloud</strong> — are also where I'm doubling
-          down. I'm growing deeper into DevOps: more Terraform, more pipelines, and anything that
-          makes software delivery boringly reliable.
-        </p>
-        <p>
-          Away from the keyboard, you'll usually find me <strong>sketching or painting</strong>,
-          immersed in a <strong>chess game</strong>, solving <strong>puzzles</strong>, or exploring
-          the <strong>mountains and beaches</strong>. I love trekking through nature, discovering new
-          places, and finding inspiration in the little things. 🎨♟️🏔️🌊
-        </p>
-      </div>
-      <div class="fact-card reveal">
-        <div class="fact"><span class="num">99.9%</span><span class="label">uptime on services I own ⚡</span></div>
-        <div class="fact"><span class="num">8+</span><span class="label">hobbies competing for weekends 🎯</span></div>
-        <div class="fact"><span class="num">24/7</span><span class="label">curiosity running in the background 🧠</span></div>
-        <div class="fact"><span class="num">1</span><span class="label">life, many interests ✨</span></div>
-        <div class="fact"><span class="num">∞</span><span class="label">ideas waiting to be sketched 🎨</span></div>
-      </div>
+    <div class="about-prose reveal">
+      <p>
+        The day-job is at <strong><a href="https://nepa.com/" target="_blank" rel="noopener">Nepa</a></strong>
+        — a consumer-insights company that helps brands actually understand their customers. For 4+ years
+        I've been the person building the things that keep our products humming: containerised microservices
+        on Kubernetes, CI/CD pipelines in TeamCity, Vue + .NET Core dashboards for teams like
+        <em>CX Brand Tracker</em> and <em>Virgin Voyages</em>, and the Prometheus / Grafana / ELK plumbing
+        that keeps everything honest. The best days are the <em>"oh, that's 90% faster now"</em> ones.
+      </p>
+      <p>
+        The parts I most enjoy — <strong>automation, CI/CD and cloud</strong> — are also where I'm doubling
+        down. I'm growing deeper into DevOps: more Terraform, more pipelines, and anything that
+        makes software delivery boringly reliable.
+      </p>
+      <p>
+        Away from the keyboard, you'll usually find me <strong>sketching or painting</strong>,
+        immersed in a <strong>chess game</strong>, solving <strong>puzzles</strong>, or exploring
+        the <strong>mountains and beaches</strong>. I love trekking through nature, discovering new
+        places, and finding inspiration in the little things. 🎨♟️🏔️🌊
+      </p>
     </div>
   </section>
 
@@ -134,15 +125,27 @@
         <div class="timeline-dot"></div>
         <div class="timeline-when">Jan 2021 — Present</div>
         <h3>💼 Software Developer <span class="at">· Nepa India Production Pvt. Ltd.</span></h3>
-        <p class="timeline-note">Three flagship projects across microservices, admin tooling, and survey platforms.</p>
+        <p class="timeline-note">Four flagship projects across microservices, analytics tooling, admin dashboards and survey platforms.</p>
 
         <div class="role-project">
           <h4>Sampler</h4>
           <ul>
             <li>Containerised the Sampler microservices with <strong>Docker</strong> and deployed to <strong>Kubernetes</strong> clusters — optimised resource use and achieved <strong>99.9% uptime</strong>.</li>
-            <li>Wrote and maintained <strong>CI/CD pipelines in TeamCity</strong> using Shell scripts and Kotlin — automated builds and deploys with a more flexible, maintainable pipeline.</li>
+            <li>Developed and maintained automated <strong>CI/CD pipelines in TeamCity</strong> using Shell scripts and Kotlin, cutting deployment times by <strong>95%</strong> and improving release frequency.</li>
             <li>Stood up comprehensive monitoring and logging with <strong>Prometheus, Grafana, and the ELK stack</strong>, cutting issue detection &amp; resolution time by <strong>50%</strong>.</li>
+            <li>Used <strong>Terraform</strong> to provision and manage cloud infrastructure, giving <strong>100%</strong> consistency and repeatability across environments.</li>
             <li>Partnered with Dev, QA and Ops to streamline workflow, reducing deployment cycle times by <strong>30%</strong>.</li>
+          </ul>
+        </div>
+
+        <div class="role-project">
+          <h4>Campaign Benchmark</h4>
+          <ul>
+            <li>Built an in-app Analysis module in <strong>ASP.NET Core (.NET 8)</strong> that replaced a legacy VBA/Excel tool — users configure filter runs, upload <code>FiltersParams</code> JSON to <strong>GCS</strong>, and trigger the <strong>Pub/Sub → Cloud Function → Dataflow</strong> pipeline end-to-end, eliminating a manual two-tool workflow.</li>
+            <li>Containerised with a <strong>multi-stage Docker</strong> build and deployed to a production <strong>GKE</strong> cluster behind an <strong>Nginx Ingress</strong> with <strong>Let's Encrypt TLS</strong> and an <strong>OIDC auth sidecar</strong>, enforcing <strong>Auth0</strong> role-based access at both proxy and app layers.</li>
+            <li>Wired up <strong>Google Cloud Build CI/CD</strong> to build, push to <strong>Artifact Registry</strong>, and roll out to Kubernetes on every merge — release turnaround down to a single push.</li>
+            <li>Integrated <strong>GCP Workload Identity</strong>, <strong>Secret Manager</strong>, and the <strong>External Secrets Operator</strong> so no credentials live in the cluster or repo; the SQL Server connection string is sourced at runtime from Secret Manager.</li>
+            <li>Shipped <strong>Dataflow job-status polling</strong> with a background sweep, in-app result <strong>CSV downloads</strong>, and a pre-submit <strong>Summary modal</strong> with per-campaign breakdown — power users monitor and retrieve results without leaving the app.</li>
           </ul>
         </div>
 
@@ -318,6 +321,18 @@
         </div>
         <div class="links">
           <span style="color:var(--fg-dim); font-family:var(--font-mono); font-size:0.85rem;">client · Virgin Voyages</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="emoji">🎯</div>
+        <h3>Campaign Benchmark</h3>
+        <p>In-app Analysis module (ASP.NET Core, .NET 8) that replaced a legacy VBA/Excel tool. Users upload <code>FiltersParams</code> JSON to GCS and trigger a <strong>Pub/Sub → Cloud Function → Dataflow</strong> pipeline — all behind GKE + Nginx Ingress + Let's Encrypt + Auth0 OIDC.</p>
+        <div class="tech">
+          <span>ASP.NET Core</span><span>GCP</span><span>GKE</span><span>Dataflow</span><span>Pub/Sub</span><span>Cloud Build</span><span>Auth0</span><span>Docker</span>
+        </div>
+        <div class="links">
+          <span style="color:var(--fg-dim); font-family:var(--font-mono); font-size:0.85rem;">internal · Nepa</span>
         </div>
       </article>
 
