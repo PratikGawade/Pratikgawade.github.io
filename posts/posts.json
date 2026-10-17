@@ -1,5 +1,12 @@
 [
   {
+    "slug": "aws-vpc-overview",
+    "title": "AWS VPC overview — exam & interview notes",
+    "date": "2026-10-17",
+    "excerpt": "A tight reference on Amazon VPC — CIDR math, subnets, routing, NAT, security groups vs NACLs, a two-AZ reference architecture, and the design + interview questions that actually come up.",
+    "tags": ["AWS", "VPC", "Networking", "DevOps"]
+  },
+  {
     "slug": "nodejs-mongodb-docker-demo",
     "title": "Dockerising a Node.js + MongoDB app",
     "date": "2023-08-04",
