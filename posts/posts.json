@@ -2,14 +2,14 @@
   {
     "slug": "nacl-security-groups-dhcp-option-sets",
     "title": "NACLs, security groups and DHCP option sets",
-    "date": "2026-01-10",
+    "date": "2026-01-03",
     "excerpt": "AWS's two VPC firewalls plus the quiet third thing. Stateful vs stateless, allow vs deny, NACL rule order, the ephemeral-ports gotcha, and the hybrid-DNS case for DHCP option sets.",
     "tags": ["AWS", "VPC", "Networking", "Security", "DevOps"]
   },
   {
     "slug": "vpc-igw-subnets-route-tables",
     "title": "VPC internet gateways, subnets and route tables",
-    "date": "2026-01-05",
+    "date": "2026-01-02",
     "excerpt": "The three pieces most VPC questions actually hinge on — IGW, subnets, route tables. What they do, how they fit together, the exam gotchas, and the interview questions interviewers lean on.",
     "tags": ["AWS", "VPC", "Networking", "DevOps"]
   },
