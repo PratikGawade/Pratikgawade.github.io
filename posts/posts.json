@@ -1,5 +1,12 @@
 [
   {
+    "slug": "vpc-peering-nat-endpoints-privatelink",
+    "title": "VPC peering, NAT gateways, endpoints and AWS PrivateLink",
+    "date": "2026-01-04",
+    "excerpt": "The four pieces most AWS networking \"which service do I pick\" questions actually hinge on. Peering vs Transit Gateway vs PrivateLink, when NAT gateways get expensive, and why gateway endpoints are the cheapest fix.",
+    "tags": ["AWS", "VPC", "Networking", "PrivateLink", "DevOps"]
+  },
+  {
     "slug": "nacl-security-groups-dhcp-option-sets",
     "title": "NACLs, security groups and DHCP option sets",
     "date": "2026-01-03",
@@ -23,28 +30,28 @@
   {
     "slug": "nodejs-mongodb-docker-demo",
     "title": "Dockerising a Node.js + MongoDB app",
-    "date": "2023-08-04",
+    "date": "2025-08-04",
     "excerpt": "Walking through a multi-container user-profile app with Node.js, Express, MongoDB and Docker Compose.",
     "tags": ["Docker", "Node.js", "MongoDB", "Compose"]
   },
   {
     "slug": "vuejs-reactive-properties",
     "title": "Reactive properties in Vue.js",
-    "date": "2023-05-01",
+    "date": "2025-05-01",
     "excerpt": "A tour of data, computed, watchers, methods, and props — the building blocks of reactivity in Vue.",
     "tags": ["Vue.js", "Frontend"]
   },
   {
     "slug": "docker-commands",
     "title": "A cheat sheet of Docker commands",
-    "date": "2023-04-30",
+    "date": "2025-04-30",
     "excerpt": "The Docker and Docker Compose commands I reach for most, with a one-liner about what each does.",
     "tags": ["Docker", "Containers", "CLI"]
   },
   {
     "slug": "introduction-to-docker",
     "title": "Introduction to containers and Docker",
-    "date": "2023-04-30",
+    "date": "2025-04-30",
     "excerpt": "A quick introduction to containers, images, and the Docker platform — in plain English.",
     "tags": ["Docker", "Containers", "DevOps"]
   }
