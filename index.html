@@ -28,7 +28,7 @@
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+        <a href="projects/">Projects</a>
         <a href="blog/">Blog</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -61,7 +61,7 @@
         — exploring better ways to <strong>build</strong>, <strong>automate</strong>, and <strong>scale software</strong>, while finding inspiration in <strong>art</strong> and <strong>nature</strong>.
       </p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#projects">See my work
+        <a class="btn btn-primary" href="projects/">See my work
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
         <a class="btn btn-ghost" href="assets/resume.pdf" download="Pratik-Gawade-CV.pdf">
@@ -232,7 +232,6 @@
     <div class="skill-group reveal">
       <h3>☁️ Cloud</h3>
       <div class="chips">
-        <span class="chip c2">GCP</span>
         <span class="chip c2">AWS</span>
         <span class="chip c2">Virtual Machines</span>
         <span class="chip c2">Cloud Storage</span>
@@ -245,11 +244,9 @@
     <div class="skill-group reveal">
       <h3>⚙️ CI/CD &amp; automation</h3>
       <div class="chips">
-        <span class="chip c5">TeamCity</span>
-        <span class="chip c5">Cloud Build</span>
+        <span class="chip c5">TeamCity & Cloud Build</span>
         <span class="chip c5">Terraform</span>
-        <span class="chip c5">Git</span>
-        <span class="chip c5">GitHub</span>
+        <span class="chip c5">Git & Github</span>
       </div>
     </div>
 
@@ -280,100 +277,6 @@
     </div>
   </section>
 
-  <section id="projects">
-    <div class="section-head reveal">
-      <span class="section-tag">// projects</span>
-      <h2>Things I've built. 🚀</h2>
-      <p>Highlights from work at Nepa plus a couple of side projects.</p>
-    </div>
-
-    <div class="project-grid">
-      <article class="project-card reveal">
-        <div class="emoji">📦</div>
-        <h3>Sampler</h3>
-        <p>Microservices for Nepa's sampling platform — containerised with Docker and running on Kubernetes with <strong>99.9% uptime</strong>. CI/CD in TeamCity, full-stack monitoring with Prometheus/Grafana + ELK.</p>
-        <div class="tech">
-          <span>Docker</span><span>Kubernetes</span><span>TeamCity</span><span>Prometheus</span><span>Grafana</span><span>ELK</span>
-        </div>
-        <div class="links">
-          <span style="color:var(--fg-dim); font-family:var(--font-mono); font-size:0.85rem;">internal · Nepa</span>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="emoji">📊</div>
-        <h3>CX Brand Tracker — Dashboards Admin</h3>
-        <p>Vue.js + .NET Core Web API admin UI that replaced manual JSON editing with a proper dashboard — <strong>90% faster</strong> operations. Automated GCS uploads cut data availability time by 95%.</p>
-        <div class="tech">
-          <span>Vue.js</span><span>.NET Core</span><span>GCP</span><span>TeamCity</span><span>Slack API</span><span>Docker</span>
-        </div>
-        <div class="links">
-          <span style="color:var(--fg-dim); font-family:var(--font-mono); font-size:0.85rem;">internal · Nepa</span>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="emoji">🚢</div>
-        <h3>Virgin Voyages Admin Panel</h3>
-        <p>Survey &amp; market-research admin platform — multi-type questions, Kafka-driven user notifications, and a full analytics dashboard tracking respondents and survey validity.</p>
-        <div class="tech">
-          <span>Vue.js</span><span>.NET Core MVC</span><span>Kafka</span><span>Postgres</span><span>Docker</span><span>Kubernetes</span>
-        </div>
-        <div class="links">
-          <span style="color:var(--fg-dim); font-family:var(--font-mono); font-size:0.85rem;">client · Virgin Voyages</span>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="emoji">🎯</div>
-        <h3>Campaign Benchmark</h3>
-        <p>In-app Analysis module (ASP.NET Core, .NET 8) that replaced a legacy VBA/Excel tool. Users upload <code>FiltersParams</code> JSON to GCS and trigger a <strong>Pub/Sub → Cloud Function → Dataflow</strong> pipeline — all behind GKE + Nginx Ingress + Let's Encrypt + Auth0 OIDC.</p>
-        <div class="tech">
-          <span>ASP.NET Core</span><span>GCP</span><span>GKE</span><span>Dataflow</span><span>Pub/Sub</span><span>Cloud Build</span><span>Auth0</span><span>Docker</span>
-        </div>
-        <div class="links">
-          <span style="color:var(--fg-dim); font-family:var(--font-mono); font-size:0.85rem;">internal · Nepa</span>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="emoji">🐳</div>
-        <h3>Node + MongoDB on Docker</h3>
-        <p>A side-project walkthrough: a multi-container user-profile app wired up with Docker Compose, networks, volumes and a Mongo-Express admin UI.</p>
-        <div class="tech">
-          <span>Docker</span><span>Node.js</span><span>MongoDB</span><span>Compose</span>
-        </div>
-        <div class="links">
-          <a href="blog/post.html?slug=nodejs-mongodb-docker-demo">Read the walkthrough →</a>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="emoji">🪄</div>
-        <h3>This portfolio</h3>
-        <p>The site you're on. Zero build step, no framework — just plain HTML, CSS and a sprinkle of JS. Deploys straight from <code>main</code> to GitHub Pages.</p>
-        <div class="tech">
-          <span>HTML</span><span>CSS</span><span>Vanilla JS</span><span>GitHub Pages</span>
-        </div>
-        <div class="links">
-          <a href="https://github.com/PratikGawade/Pratikgawade.github.io" target="_blank" rel="noopener">Source →</a>
-        </div>
-      </article>
-
-      <article class="project-card reveal">
-        <div class="emoji">📝</div>
-        <h3>Writing &amp; notes</h3>
-        <p>Short, practical posts on Docker, Vue, and the DevOps rabbit holes I fall into. Where I think out loud.</p>
-        <div class="tech">
-          <span>Docker</span><span>Vue.js</span><span>DevOps</span>
-        </div>
-        <div class="links">
-          <a href="blog/">Browse the blog →</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
   <section id="education">
     <div class="section-head reveal">
       <span class="section-tag">// education</span>
@@ -398,6 +301,7 @@
       <div class="chips reveal">
         <span class="chip c1">🎨 Drawing & creativity</span>
         <span class="chip c5">🍳 Cooking</span>
+        <span class="chip c5">📸 Photography</span>
         <span class="chip c2">🌐 Geopolitics & world affairs</span>
         <span class="chip c2">🥾 Trekking</span>
         <span class="chip c4">🔭 Space & astronomy</span>
