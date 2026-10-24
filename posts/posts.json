@@ -1,5 +1,12 @@
 [
   {
+    "slug": "amazon-ec2-overview",
+    "title": "Amazon EC2 — exam & interview notes",
+    "date": "2026-10-24",
+    "excerpt": "A tight reference on Amazon EC2 — AMIs, instance types, user data, metadata, hibernation and the lifecycle. The exam traps that catch people out and the interview questions that come up.",
+    "tags": ["AWS", "EC2", "Compute", "DevOps"]
+  },
+  {
     "slug": "vpc-peering-nat-endpoints-privatelink",
     "title": "VPC peering, NAT gateways, endpoints and AWS PrivateLink",
     "date": "2026-01-04",
